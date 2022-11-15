@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
 *{
   margin: 0;
   padding: 0;
@@ -7,7 +6,255 @@
   list-style-type: none;
   text-decoration: none;
 }
-
 body{
   font-family: 'Roboto', sans-serif;
+  background-color: #F2FAFF;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ---------------------------------- HEADER E NAVBAR ----------------------------------- */
+
+.header-main{
+  width: 100%;
+  color: #ffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+}
+.header-main .header-main-header{
+  background-color: #00A5FF;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 42px;
+  width: 100%;
+  padding: 0 145px;
+}
+.header-main .header-main-header .img-betel{
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+}
+.header-main .header-main-header .img-betel img{
+  height: 100%;  
+  object-fit: contain;
+}
+.header-main .header-main-header .info-igreja{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.header-main .header-main-header .info-igreja .igreja-authenticated{
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #e6e6e6;
+  transition: all ease 0.5s;
+}
+.header-main .header-main-header .info-igreja .igreja-authenticated:hover{
+  color: #fff;
+}
+.header-main .header-main-header .info-igreja .igreja-authenticated span{
+  height: 90%;  
+  border-radius: 5px;
+  overflow: hidden;
+}
+.header-main .header-main-header .info-igreja .igreja-authenticated span img{
+  height: 100%;  
+  object-fit: contain;
+}
+.header-main .header-main-header .info-igreja .igreja-authenticated p{
+  padding: 0 10px;
+}
+.header-main  .ul-config-header-main{
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.header-main .ul-config-header-main li{
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  transition: all ease 0.5s;
+}
+.header-main .ul-config-header-main li #arrow-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 98%;
+}
+.header-main .ul-config-header-main li #arrow-icon:hover{
+  background-color: #1bafff;
+}
+.header-main .ul-config-header-main .item-menu-settings:hover{
+  background-color: #edf5fa;
+}
+.header-main .ul-config-header-main li .arrow-icon{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  padding: 0 5px;
+}
+.header-main .ul-config-header-main ul{
+  display: none;
+  position: absolute;
+  top: 42px;
+  width: 150px;
+
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white; 
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow-y: hidden;
+  box-shadow:0px 15px 18px 3px #e7e7e7;
+  z-index: 10;
+}
+.header-main .ul-config-header-main ul.active{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header-main .ul-config-header-main ul li{ 
+  height: 33px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;  
+}
+.header-main .ul-config-header-main ul li a{
+  color: rgb(65, 65, 65);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.header-main .ul-config-header-main ul li .icon-item{
+  padding: 0 6px;
+  font-size: 18px;
+  text-align: start;
+}
+.header-main .foto-person{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-main .foto-person .icon-user{
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* --------------------------------NAV MENU MAIN---------------------------------- */
+
+.nav-menu-main{
+  height: 50px;
+  background-color: #c7eafd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow:0px 13px 18px 0px rgb(228, 237, 235);
+  width: 100%;
+}
+.nav-menu-main ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.nav-menu-main ul li{
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: solid 2px #F2FAFF;
+}
+.nav-menu-main ul li a{
+  display: flex;
+  height: 100%;  
+  align-items: center;
+  width: 120px;
+  justify-content: center;
+  transition: background-color ease 0.3s;
+  font-size: 14px;
+  color: rgb(48, 48, 48);
+  font-weight: 300;
+}
+.nav-menu-main ul li .icon-menu-main{
+  padding-right: 7px;
+  font-size: 20px;
+  color: rgb(48, 48, 48);
+  font-weight: 300;
+}
+.nav-menu-main ul li a:hover{
+  background-color: rgb(208, 243, 255);
+  color: rgb(27, 27, 27);
+}
+.nav-menu-main ul li:hover ul{
+  display: block;
+  background-color: rgb(208, 243, 255);
+}
+.nav-menu-main ul ul{
+  display: none;
+  position: absolute;
+  top: 50px;
+  height: auto;
+  width: 160px;
+  box-shadow:0px 13px 18px 0px rgb(228, 237, 235);
+}
+.nav-menu-main ul ul li{
+  border: none;
+  height: 50px;
+}
+.nav-menu-main ul ul li a{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 20px;
+}
+.nav-menu-main ul ul li .icons-sub-menu-main{
+  font-size: 15px;
+  padding-right: 8px;
+}
+.nav-menu-main ul ul li a:hover{
+  color: black;
+  font-weight: 400;
+}
+.nav-menu-main ul .last-option{
+  border-right: none;
+}
+
+/* -----------------------------FOOTER--------------------------------- */
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  bottom: 0px;
+  font-size: 13px;
+  color: rgb(116, 116, 116);
+  font-weight: 300;
 }

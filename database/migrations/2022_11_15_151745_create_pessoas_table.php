@@ -13,23 +13,27 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('membros', function (Blueprint $table) {
-            $table->char('cpf','11')->unique();
+        Schema::create('pessoas', function (Blueprint $table) {
+            $table->increments('id');
             $table->timestamps();
             $table->string('nome','500');
             $table->string('sobrenome','500');
-            $table->string('celular','15')->nullable();
             $table->string('image','1000')->nullable();
             $table->date('data_nascimento');
             $table->string('sexo','200');
+            $table->string('nome_conjuge','500')->nullable();
 
-            $table->primary('cpf');
+
             $table->unsignedInteger('fk_congregacao_id');
-            $table->unsignedBigInteger('fk_endereco_id');
-            $table->unsignedBigInteger('fk_classe_ebd_id');
+            $table->unsignedInteger('fk_endereco_id');
+            $table->unsignedInteger('fk_classe_ebd_id');
+            $table->unsignedInteger('fk_grau_instrucao_id');
+            $table->unsignedInteger('fk_estado_civil_id');
             $table->foreign('fk_congregacao_id')->references('id')->on('congregacao');
             $table->foreign('fk_endereco_id')->references('id')->on('endereco');
             $table->foreign('fk_classe_ebd_id')->references('id')->on('classe_ebd');
+            $table->foreign('fk_grau_instrucao_id')->references('id')->on('graus_instrucao');
+            $table->foreign('fk_estado_civil_id')->references('id')->on('estado_civil');
         });
     }
 

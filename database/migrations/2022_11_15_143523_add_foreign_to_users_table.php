@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedBigInteger('fk_perfil_user_id');
+            $table->unsignedInteger('fk_perfil_user_id');
             $table->foreign('fk_perfil_user_id')->references('id')->on('perfil_user');
             $table->unsignedInteger('fk_congregacao_id');
             $table->foreign('fk_congregacao_id')->references('id')->on('congregacao');
@@ -30,7 +30,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('fk_perfil_user_id');
-            $table->dropForeign('fk_congregacao_id');
+            $table->dropColumn('fk_congregacao_id');
         });
     }
 };

@@ -14,14 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('campo', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->timestamps();
             $table->string('name_campo','600');
             $table->string('nome_denominacao','700');
             $table->string('image','1000')->nullable();
             $table->string('ministerio','600');
 
-            $table->unsignedBigInteger("fk_pastor_id");
+            $table->unsignedInteger("fk_pastor_id");
             $table->foreign("fk_pastor_id")->references("id")->on('pastor');
         });
     }

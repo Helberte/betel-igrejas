@@ -21,11 +21,11 @@ return new class extends Migration
             $table->boolean('sede');
             $table->string('telefone','15')->nullable();
 
-            $table->unsignedBigInteger('fk_endereco_id');
+            $table->unsignedInteger('fk_endereco_id');
             $table->foreign('fk_endereco_id')->references('id')->on('endereco');
-            $table->unsignedBigInteger('fk_pastor_id');
+            $table->unsignedInteger('fk_pastor_id');
             $table->foreign('fk_pastor_id')->references('id')->on('pastor');
-            $table->unsignedBigInteger('fk_campo_id');
+            $table->unsignedInteger('fk_campo_id');
             $table->foreign('fk_campo_id')->references('id')->on('campo');
         });
     }

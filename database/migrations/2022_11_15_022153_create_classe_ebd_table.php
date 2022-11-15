@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('classe_ebd', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->timestamps();
             $table->string('nome','300');
             $table->integer('idade_minima')->unsigned();

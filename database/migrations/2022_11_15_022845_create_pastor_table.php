@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pastor', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->timestamps();
             $table->string('name','500');
             $table->string('sobrenome','500');

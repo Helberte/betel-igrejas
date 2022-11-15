@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('membro_exerce_ministerio', function (Blueprint $table) {
+        Schema::create('pessoa_exerce_ministerio', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             
-            $table->unsignedBigInteger('fk_ministerios_id');
-            $table->char('fk_cpf_membros','11');
+            $table->unsignedInteger('fk_ministerios_id');
+            $table->unsignedInteger('fk_pessoas_id');
             $table->foreign('fk_ministerios_id')->references('id')->on('ministerios');
-            $table->foreign('fk_cpf_membros')->references('cpf')->on('membros');
+            $table->foreign('fk_pessoas_id')->references('id')->on('pessoas');
         });
     }
 

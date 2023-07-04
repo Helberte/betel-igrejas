@@ -24,6 +24,7 @@ body{
   align-items: flex-start;
   position: fixed;
   top: 0;
+  box-shadow: 0 1px 8px 1px rgba(0,0,0,.2);
 }
 .header-main .header-main-header{
   background-color: #00A5FF;
@@ -172,7 +173,6 @@ body{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  box-shadow:0px 13px 18px 0px rgb(228, 237, 235);
   width: 100%;
 }
 .nav-menu-main ul{
